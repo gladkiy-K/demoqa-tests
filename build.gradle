@@ -6,15 +6,20 @@ repositories {
     mavenCentral() //determine repo where we're gonna take our libs
 }
 
-dependencies{
+dependencies {
     testImplementation(
+            'com.codeborne:selenide:7.5.1',
             "org.junit.jupiter:junit-jupiter:5.10.0",
-            'com.codeborne:selenide:7.5.1'
             //don't forget about rmb > link gradle proj
+            "org.slf4j:slf4j-simple:2.0.16"
     )
 }
 
-test{
+//tasks.withType(JavaCompile).configureEach {
+//    options.encoding = 'UTF-8'
+//}
+
+test {
     useJUnitPlatform() //let us to run tests
 }
 
